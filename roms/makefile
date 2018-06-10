@@ -5,8 +5,7 @@ CLOCK      = 16000000UL
 PROGRAMMER = avr109
 PORT = /dev/cu.usbmodem1411
 BAUD = 57600
-#AVRDUDE = avrdude -v -p$(DEVICE) -c$(PROGRAMMER) -P$(PORT) -b$(BAUD) -D
-AVRDUDE = /Applications/Arduino.app/Contents/Java/hardware/tools/avr/bin/avrdude -C /Applications/Arduino.app/Contents/Java/hardware/tools/avr/etc/avrdude.conf -v -p$(DEVICE) -c$(PROGRAMMER) -P$(PORT) -b$(BAUD) -D -V
+AVRDUDE = avrdude -v -p$(DEVICE) -c$(PROGRAMMER) -P$(PORT) -b$(BAUD) -D
 COMPILE = avr-gcc -fstack-usage -Wall -Os -std=c99 -DF_CPU=$(CLOCK) -mmcu=$(DEVICE)
 
 TARGETS = simple.hex

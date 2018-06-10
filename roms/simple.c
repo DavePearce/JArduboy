@@ -40,14 +40,14 @@ void refresh() {
 
 void setup() {
   // set SCLK, MOSI, MISO, SS to be output
-  DDRB = 0b00001111;
-  PORTB = 0b00000000;
+  //DDRB = 0b00001111;
+  //PORTB = 0b00000000;
 }
 
 void main() {
   setup();
   //
-  fill(0xff);
+  //fill(0xff);
   //
-  refresh();
+  //refresh();
 }
