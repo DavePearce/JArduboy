@@ -172,6 +172,6 @@ public class ArduboyEmulator {
 		// Multiplex it all together.
 		AVR.Memory data = new MultiplexedMemory(registers, io, SRAM);
 		//
-		return new AVR.Instrumentable(new AvrDecoder(), new AvrExecutor(), pins, flash, data);
+		return new AVR.Instrumentable(new AvrExecutor(flash.size(),new AvrDecoder()), pins, flash, data);
 	}
 }
